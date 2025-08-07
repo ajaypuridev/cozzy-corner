@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
   const cookie = request.cookies.get('hash');
-  if (cookie?.value === process.env.ADMIN_HASH) {
+  if (cookie?.value === "ajay123321") {
     return NextResponse.next();
   }
   return NextResponse.redirect(new URL('/', request.url));
